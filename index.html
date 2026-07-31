@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SIMON WANG // OPERATOR FILE</title>
+<title>RAYMOND YANG // OPERATOR FILE</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Share+Tech+Mono&family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -115,15 +115,7 @@
     font-size:clamp(3.2rem,11vw,7rem);text-transform:uppercase;position:relative;display:inline-block;
   }
   .codename .zh{display:block;font-size:.2em;letter-spacing:.5em;color:var(--muted);font-weight:500;margin-top:.9rem}
-  /* RGB-split glitch ("lost sync") */
-  .codename:hover .g{animation:glitch .5s steps(2) 2}
   .codename .g{position:relative}
-  .codename .g::before,.codename .g::after{
-    content:attr(data-t);position:absolute;left:0;top:0;width:100%;overflow:hidden;opacity:0;
-  }
-  .codename:hover .g::before{opacity:.9;color:var(--alert);transform:translate(-3px,1px);clip-path:inset(0 0 55% 0)}
-  .codename:hover .g::after{opacity:.9;color:var(--signal);transform:translate(3px,-1px);clip-path:inset(55% 0 0 0)}
-  @keyframes glitch{0%{transform:translate(0)}25%{transform:translate(-2px,1px)}50%{transform:translate(2px,-1px)}75%{transform:translate(-1px,0)}100%{transform:translate(0)}}
   .role-tags{display:flex;gap:.6rem;flex-wrap:wrap;margin:1.8rem 0 1.5rem}
   .rtag{font-family:var(--mono);font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;
     padding:.4rem .8rem;background:var(--bg2);border:1px solid var(--line);color:var(--fg)}
@@ -156,7 +148,7 @@
   .rec::before{content:"";position:absolute;left:6px;top:8px;bottom:8px;width:1px;background:var(--line)}
   .ritem{position:relative;padding-bottom:2.2rem}
   .ritem:last-child{padding-bottom:0}
-  .ritem::before{content:"";position:absolute;left:1px;top:6px;width:11px;height:11px;background:var(--bg);
+  .ritem::before{content:"";position:absolute;left:-29px;top:6px;width:11px;height:11px;background:var(--bg);
     border:2px solid var(--signal);transform:rotate(45deg)}
   .rdate{font-family:var(--mono);font-size:.74rem;color:var(--signal);letter-spacing:.08em;margin-bottom:.3rem}
   .rrole{font-family:var(--disp);font-weight:600;font-size:1.1rem}
@@ -236,7 +228,7 @@
       <a href="#profile">PROFILE</a>
       <a href="#record">RECORD</a>
       <a href="#aptitudes">APTITUDES</a>
-      <a href="#operations">OPS</a>
+      <a href="#operations">PROJECTS</a>
       <a href="#comms">COMMS</a>
     </nav>
     <div style="display:flex;align-items:center;gap:1rem">
@@ -254,26 +246,27 @@
       &gt; establishing link... <span class="ok">[ OK ]</span> &nbsp; authenticating operator... <span class="ok">[ OK ]</span> &nbsp; decrypting file<span class="cur">_</span>
     </div>
     <div class="filemeta rev">
-      <span>FILE&nbsp;<b>#SW-0325</b></span>
-      <span>CLASS&nbsp;<b>ANALYST</b></span>
+      <span>FILE&nbsp;<b>#RY</b></span>
+      <span>TITLE&nbsp;<b>ENGINEER</b></span>
       <span>ORIGIN&nbsp;<b>N47.66 / W122.31</b></span>
       <span>STATUS&nbsp;<b style="color:var(--online)">ACTIVE</b></span>
     </div>
     <h1 class="codename rev">
-      <span class="g" data-t="SIMON WANG">SIMON WANG</span>
-      <span class="zh">西蒙 · 王</span>
+      <span class="g">RAYMOND YANG</span>
+      <span class="zh">杨睿明</span>
     </h1>
     <div class="role-tags rev">
       <span class="rtag sig">DATA SCIENTIST</span>
       <span class="rtag sig">DATA ANALYST</span>
-      <span class="rtag">PIPELINES</span>
+      <span class="rtag">ETL PIPELINES</span>
       <span class="rtag">DASHBOARDS</span>
       <span class="rtag">AI AGENTS</span>
     </div>
     <p class="dossier rev">Operative specializing in <b>grants &amp; research-funding analytics</b>. Builds the layer between raw source data and the people who act on it — from medallion pipelines and dashboards to LLM agents that answer what no dashboard can.</p>
     <div class="cta-row rev">
-      <a href="#operations" class="btn primary cut">▸ Review operations</a>
-      <a href="#comms" class="btn ghost cut">Open comms</a>
+      <a href="#operations" class="btn primary cut">▸ PROJECT EXPERIENCE</a>
+      <a href="#comms" class="btn ghost cut">BLOG</a>
+      <a href="#comms" class="btn ghost cut">CONTACT ME</a>
     </div>
   </div>
 </section>
@@ -296,11 +289,10 @@
       <div class="frame readout cut">
         <div class="rt">◆ Vitals</div>
         <div class="row"><span class="k">Base</span><span class="v">Seattle, WA</span></div>
-        <div class="row"><span class="k">Assignment</span><span class="v">Funding analytics</span></div>
+        <div class="row"><span class="k">Interests</span><span class="v">Funding analytics</span></div>
         <div class="row"><span class="k">Langs</span><span class="v">EN · 中文</span></div>
-        <div class="row"><span class="k">Comms</span><span class="v"><a href="mailto:you@example.com">you@example.com</a></span></div>
-        <div class="row"><span class="k">Repo</span><span class="v"><a href="#">@yourhandle</a></span></div>
-        <div class="row"><span class="k">Net</span><span class="v"><a href="#">/in/you</a></span></div>
+        <div class="row"><span class="k">Comms</span><span class="v"><a href="raymondrmyang@gmail.com">raymondrmyang@gmail.com</a></span></div>
+        <div class="row"><span class="k">Repo</span><span class="v"><a href="https://github.com/rr-Yang/Raymond_Yang">https://github.com/rr-Yang/Raymond_Yang</a></span></div>
       </div>
     </div>
   </div>
@@ -316,31 +308,37 @@
     </div>
     <div class="rec rev">
       <div class="ritem">
-        <div class="rdate">2025 — PRESENT</div>
+        <div class="rdate">2025.01 — 2026.01</div>
         <div class="rrole">Data Analyst — Research Funding Analytics</div>
-        <div class="rorg">[ ORGANIZATION ]</div>
+        <div class="rorg"><a href="https://alleninstitute.org/" target="_blank" rel="noopener noreferrer">Allen Institute</a><span class="ext">↗</span></a></div>
         <ul>
-          <li>Build and maintain analytics on grants and research-funding data for reporting and decisions.</li>
-          <li>Convert fragmented source systems into clean models, dashboards, and repeatable reporting.</li>
-          <li>[ Add one quantified win — e.g. cut a monthly report cycle from 2 days to 20 minutes. ]</li>
+          <li>Designed and implemented 20+ Smartsheet reports and Power BI dashboards for 6 Scientific Departments, implemented formula
+calculations from 10+ Excel sheets, dealt with over 100 million$ funding and 198 grants. </li>
+          <li>Built an analytics data mart for grants and funding in Snowflake, with ingestion & transformation jobs orchestrated from Databricks
+notebooks and Python scripting; documented models and lineage in Git repos and automated CI checks. </li>
+          <li>Wrote SQL for quality checks and data validation across Smartsheet/Oracle sources; added regression-style predictive analysis
+to forecast run-rate and grant burn, with results shared via Jupyter/Colab notebooks.</li>
         </ul>
       </div>
       <div class="ritem">
-        <div class="rdate">GRADUATED MAR 2025</div>
+         <div class="rdate">GRADUATED MAR 2025</div>
         <div class="rrole">B.S. Data Science</div>
-        <div class="rorg">University of Washington · GPA 3.5</div>
+        <div class="rorg"><a href="https://www.washington.edu" target="_blank" rel="noopener noreferrer">University of Washington<span class="ext">↗</span></a> · GPA 3.5</div>
         <ul>
           <li>Statistics, machine learning, databases, data engineering.</li>
           <li>Projects across the modern data stack — cloud pipelines, dashboards, applied ML.</li>
         </ul>
       </div>
       <div class="ritem">
-        <div class="rdate">FIELD DEPLOYMENT — SHANGHAI</div>
+        <div class="rdate">2024.05 — 2024.09 </div>
         <div class="rrole">Data Engineering Intern</div>
-        <div class="rorg">Codeflag AI</div>
+        <div class="rorg"><a href=https://www.crunchbase.com/organization/codeflag"" target="_blank" rel="noopener noreferrer">Codeflag AI<span class="ext">↗</span></a></div>
         <ul>
-          <li>Built Azure and Oracle Cloud data workflows for logistics data.</li>
-          <li>Automated ingestion and transformation in Python, retiring manual steps.</li>
+          <li>Architected an automated Azure medallion ETL pipeline (ADF + Data Lake Gen2 + Databricks + Synapse Analytics), reducing
+manual reporting prep time by ~70% and delivering daily fresh KPI data to stakeholders.</li>
+          <li>Engineered dynamic ForEach-driven ADF pipelines that auto-discovered all SQL schema tables and triggered downstream PySpark
+transformation jobs across layers,eliminating hardcoded references and cutting pipeline maintenance overhead by ~4 hours per sprint.</li>
+          
         </ul>
       </div>
     </div>
@@ -396,7 +394,7 @@
   <div class="wrap">
     <div class="sechead rev">
       <span class="secno">04</span>
-      <h2 class="sectitle">Operations<span class="zh">作战记录</span></h2>
+      <h2 class="sectitle">Project Experience<span class="zh">专业经验</span></h2>
       <span class="secline"></span>
     </div>
     <div class="ops rev">
@@ -407,7 +405,7 @@
           <h3>Vantage AI</h3>
           <p>Multi-step research &amp; analysis agent — give it a question, it plans, retrieves, and reasons across sources to return a sourced answer instead of a raw search dump.</p>
           <div class="eq"><b>EQUIP:</b> LangGraph / GPT-4o / RAG / FastAPI</div>
-          <div class="links"><a href="#">CODE ↗</a><a href="#">DEMO ↗</a></div>
+          <div class="links"><a href="https://github.com/rr-Yang/Raymond_Yang">CODE ↗</a><a href="https://github.com/rr-Yang/Raymond_Yang/tree/main/car_damage_assessment_demo">DEMO ↗</a></div>
         </div>
       </div>
 
@@ -417,7 +415,7 @@
           <h3>Medallion Pipeline</h3>
           <p>End-to-end smart-claims pipeline on Databricks — landing → bronze → silver → gold — with PySpark transforms and tested, query-ready gold tables.</p>
           <div class="eq"><b>EQUIP:</b> Databricks / PySpark / Delta</div>
-          <div class="links"><a href="#">CODE ↗</a></div>
+          <div class="links"><a href="https://github.com/rr-Yang/Raymond_Yang">CODE ↗</a></div>
         </div>
       </div>
 
@@ -427,7 +425,7 @@
           <h3>Cortex Dashboards</h3>
           <p>Economic-indicator dashboards on Snowflake with Cortex Analyst — non-technical users query the data in plain English.</p>
           <div class="eq"><b>EQUIP:</b> Snowflake / Cortex / SQL</div>
-          <div class="links"><a href="#">CODE ↗</a></div>
+          <div class="links"><a href="https://github.com/rr-Yang/Raymond_Yang">CODE ↗</a></div>
         </div>
       </div>
 
@@ -437,7 +435,7 @@
           <h3>IPL Analytics</h3>
           <p>Match and player analytics over a large cricket dataset — ingestion, modeling, and PySpark analysis surfacing performance trends across seasons.</p>
           <div class="eq"><b>EQUIP:</b> Databricks / PySpark / SQL</div>
-          <div class="links"><a href="#">CODE ↗</a></div>
+          <div class="links"><a href="https://github.com/rr-Yang/Raymond_Yang">CODE ↗</a></div>
         </div>
       </div>
 
@@ -447,7 +445,7 @@
           <h3>Serverless App</h3>
           <p>Fully serverless application on AWS — event-driven backend, managed storage, lightweight front end, zero servers to babysit.</p>
           <div class="eq"><b>EQUIP:</b> Lambda / API Gateway / DynamoDB</div>
-          <div class="links"><a href="#">CODE ↗</a></div>
+          <div class="links"><a href="https://github.com/rr-Yang/Raymond_Yang">CODE ↗</a></div>
         </div>
       </div>
 
@@ -457,7 +455,7 @@
           <h3>Equity Research</h3>
           <p>Institutional-style equity research with scenario analysis and clean visualization — the analysis-to-narrative craft, applied to markets.</p>
           <div class="eq"><b>EQUIP:</b> Python / Valuation / Reporting</div>
-          <div class="links"><a href="#">SAMPLE ↗</a></div>
+          <div class="links"><a href="https://github.com/rr-Yang/Raymond_Yang">CODE ↗</a></div>
         </div>
       </div>
 
@@ -470,12 +468,13 @@
 <section class="comms" id="comms">
   <div class="wrap">
     <span class="label" style="display:block;margin-bottom:.5rem">◆ 05 // COMMS · 通讯</span>
-    <div class="big">Open a channel</div>
+    <div class="big">Contact Me</div>
     <p>Available for data analyst / data scientist assignments and interesting collaborations. Email is the fastest route.</p>
     <div class="comms-links">
-      <a href="mailto:you@example.com">you@example.com</a>
-      <a href="#">GITHUB</a>
-      <a href="#">LINKEDIN</a>
+      <a href="mailto:raymondrmyang@gmail.com">raymondrmyang@gmail.com</a>
+      <a href="https://github.com/rr-Yang/Raymond_Yang">GITHUB</a>
+      <a href="">BLOG</a>
+      <a href="https://www.linkedin.com/in/raymond-yang-676883285/">LINKEDIN</a>
       <a href="#">RÉSUMÉ</a>
     </div>
   </div>
