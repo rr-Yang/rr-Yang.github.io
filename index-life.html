@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RAYMOND YANG // OFF THE CLOCK</title>
+
+<!-- ============================================================
+     HOW TO EDIT THIS PAGE  (你只需要改两类东西)
+     1) TEXT  —  anything between the > ... < is yours to rewrite.
+     2) PHOTOS —  each photo is a placeholder like:
+            <div class="ph" data-tint="honey">PHOTO · caption</div>
+        To drop in a real photo, replace that whole div with:
+            <img class="ph" src="my-photo.jpg" alt="me at Rainier">
+        Everything else (frame, tape, rotation) keeps working.
+     3) NAME / LOCATION — search "Raymond Yang" and "Seattle" to swap.
+     4) The "The Work" link points to index-terminal.html (your tech page).
+     ============================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --paper:#F4EFE3;        /* warm paper base */
+    --paper2:#FBF7EE;       /* raised card / polaroid white-ish */
+    --ink:#2C2823;          /* warm near-black */
+    --muted:#8C8275;        /* soft brown-gray */
+    --faint:#B7AE9C;
+    --line:#E3DAC7;         /* hairline on paper */
+    --honey:#B9762B;        /* warm accent — cousin of the tech page's amber */
+    --honey-soft:#E8C48A;
+    --pine:#2F5B54;         /* cool counterpoint — outdoors / travel */
+    --pine-soft:#9FBAB2;
+
+    --disp:'Fraunces',Georgia,serif;      /* characterful warm serif */
+    --body:'Inter',system-ui,sans-serif;  /* shared with the tech page */
+    --mono:'Share Tech Mono',monospace;   /* shared with the tech page — now a field-note hand */
+    --maxw:1080px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:74px}
+  body{
+    background:var(--paper);color:var(--ink);font-family:var(--body);line-height:1.68;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  }
+  /* faint paper grain + dot-grid — the soft echo of the tech page's HUD grid */
+  body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.6;
+    background:
+      radial-gradient(rgba(44,40,35,.05) .8px,transparent 1px) 0 0/22px 22px;
+    -webkit-mask-image:linear-gradient(180deg,transparent,#000 40%,#000);
+    mask-image:linear-gradient(180deg,transparent,#000 40%,#000);
+  }
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--honey-soft);color:var(--ink)}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px;position:relative;z-index:2}
+  .mono{font-family:var(--mono);letter-spacing:.04em}
+  .eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--honey)}
+  .eyebrow .zh{color:var(--muted);letter-spacing:.16em}
+
+  /* ---------- TOP BAR ---------- */
+  header{
+    position:sticky;top:0;z-index:40;
+    background:rgba(244,239,227,.82);backdrop-filter:blur(9px) saturate(120%);
+    border-bottom:1px solid var(--line);
+  }
+  .bar{display:flex;align-items:center;justify-content:space-between;height:60px}
+  .brand{display:flex;align-items:baseline;gap:.7rem}
+  .brand .nm{font-family:var(--disp);font-weight:600;font-size:1.06rem;letter-spacing:.01em}
+  .brand .st{font-family:var(--mono);font-size:.64rem;letter-spacing:.16em;color:var(--pine);
+    border:1px solid var(--pine-soft);padding:.12rem .4rem;border-radius:2px;text-transform:uppercase}
+  nav{display:flex;gap:1.4rem;align-items:center}
+  nav a{font-family:var(--mono);font-size:.74rem;letter-spacing:.06em;color:var(--muted);text-transform:uppercase;transition:color .16s}
+  nav a:hover{color:var(--ink)}
+  nav a.work{color:var(--honey)}
+  nav a.work:hover{color:var(--ink)}
+  .menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--honey);
+    font-family:var(--mono);font-size:.7rem;padding:.34rem .5rem;cursor:pointer;letter-spacing:.08em;border-radius:3px}
+
+  /* ---------- reusable photo frame (THE SIGNATURE) ---------- */
+  .polaroid{background:var(--paper2);padding:12px 12px 14px;border:1px solid var(--line);
+    box-shadow:0 14px 30px -18px rgba(44,40,35,.55), 0 2px 0 rgba(44,40,35,.04);
+    position:relative;transition:transform .35s cubic-bezier(.2,.7,.3,1), box-shadow .35s;}
+  .polaroid::before{ /* washi tape */
+    content:"";position:absolute;top:-11px;left:50%;transform:translateX(-50%) rotate(-3deg);
+    width:78px;height:22px;background:rgba(185,118,43,.24);
+    border-left:1px dashed rgba(185,118,43,.35);border-right:1px dashed rgba(185,118,43,.35);
+    box-shadow:0 1px 4px rgba(44,40,35,.08);}
+  .polaroid.pine::before{background:rgba(47,91,84,.20);border-color:rgba(47,91,84,.35)}
+  .polaroid:hover{transform:rotate(0deg) translateY(-3px);box-shadow:0 22px 40px -20px rgba(44,40,35,.6)}
+  .ph{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;
+    background:
+      linear-gradient(135deg,rgba(185,118,43,.16),rgba(47,91,84,.14)),
+      repeating-linear-gradient(45deg,rgba(44,40,35,.03) 0 8px,transparent 8px 16px);
+    color:var(--muted);font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;
+    display:flex;align-items:center;justify-content:center;text-align:center;padding:1rem;line-height:1.5}
+  .ph[data-tint="pine"]{background:
+      linear-gradient(135deg,rgba(47,91,84,.20),rgba(185,118,43,.10)),
+      repeating-linear-gradient(45deg,rgba(44,40,35,.03) 0 8px,transparent 8px 16px)}
+  .cap{font-family:var(--mono);font-size:.72rem;color:var(--ink);margin-top:.7rem;line-height:1.45}
+  .cap .geo{color:var(--honey);display:block;font-size:.66rem;letter-spacing:.06em;margin-top:.25rem}
+
+  /* ---------- HERO ---------- */
+  .hero{padding:66px 0 40px;position:relative}
+  .hero-grid{display:grid;grid-template-columns:1.35fr .9fr;gap:3rem;align-items:center}
+  .hero h1{font-family:var(--disp);font-weight:500;font-size:clamp(2.5rem,6.2vw,4.4rem);
+    line-height:1.02;letter-spacing:-.015em;margin:1rem 0 1.3rem}
+  .hero h1 em{font-style:italic;color:var(--honey);font-weight:500}
+  .lede{font-size:1.14rem;color:#4A443C;max-width:46ch;margin-bottom:1.7rem}
+  .lede b{font-weight:500;color:var(--ink)}
+  .meta{display:flex;flex-direction:column;gap:.5rem;font-family:var(--mono);font-size:.76rem;color:var(--muted)}
+  .meta .row{display:flex;gap:.6rem}
+  .meta .k{color:var(--pine);min-width:96px;letter-spacing:.08em}
+  .meta a:hover{color:var(--honey)}
+  .hero-photo{justify-self:center}
+  .hero-photo .polaroid{transform:rotate(2.4deg);max-width:550px}
+
+  /* ---------- NOW STRIP ---------- */
+  .now{border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:34px}
+  .now-inner{display:grid;grid-template-columns:auto 1fr 1fr 1fr;gap:1.6rem;padding:22px 0;align-items:baseline}
+  .now .tag{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--honey)}
+  .now .item .l{font-family:var(--mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);display:block;margin-bottom:.2rem}
+  .now .item .v{font-size:.98rem;color:var(--ink)}
+  .now .item .v em{font-style:italic;color:var(--pine)}
+
+  /* ---------- SECTIONS ---------- */
+  section.blk{padding:78px 0}
+  .sechead{display:flex;align-items:baseline;gap:1rem;margin-bottom:2.4rem}
+  .sechead h2{font-family:var(--disp);font-weight:500;font-size:clamp(1.7rem,4vw,2.4rem);letter-spacing:-.01em}
+  .sechead h2 .zh{font-size:.62em;color:var(--muted);margin-left:.5rem;font-weight:400}
+  .sechead .rule{flex:1;height:1px;background:var(--line);position:relative;top:-6px}
+
+  /* ---------- PURSUITS ---------- */
+  .pursuits{display:flex;flex-direction:column;gap:2.4rem}
+  .prow{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+  .prow.imgs .polaroid{max-width:400px}
+  .prow.imgs .polaroid:nth-child(1){transform:rotate(-2deg)}
+  .prow.imgs .polaroid:nth-child(2){transform:rotate(1.6deg)}
+  .ptext{max-width:400px}
+  .ptext h3{font-family:var(--disp);font-weight:600;font-size:1.28rem;margin-bottom:.5rem}
+  .ptext .n{font-family:var(--mono);font-size:.66rem;color:var(--honey);letter-spacing:.1em;display:block;margin-bottom:.35rem}
+  .ptext p{font-size:.96rem;color:#4A443C}
+
+  /* ---------- TRAVEL GALLERY ---------- */
+  .intro-line{font-size:1.1rem;color:#4A443C;max-width:52ch;margin:-1rem 0 2.6rem}
+  .gallery{columns:3;column-gap:1.8rem}
+  .gallery .polaroid{break-inside:avoid;margin-bottom:1.8rem;display:inline-block;width:100%}
+  .gallery .polaroid:nth-child(3n+1){transform:rotate(-1.8deg)}
+  .gallery .polaroid:nth-child(3n+2){transform:rotate(1.4deg)}
+  .gallery .polaroid:nth-child(3n+3){transform:rotate(-.6deg)}
+  .gallery .ph{aspect-ratio:auto;min-height:150px}
+  .gallery .polaroid:nth-child(3n+2) .ph{min-height:210px}
+
+  /* ---------- CONTACT ---------- */
+  .contact{border-top:1px solid var(--line);padding:74px 0 30px}
+  .contact h2{font-family:var(--disp);font-weight:500;font-size:clamp(2rem,5vw,3.1rem);letter-spacing:-.015em;margin-bottom:1rem}
+  .contact h2 em{font-style:italic;color:var(--honey)}
+  .contact p{color:#4A443C;max-width:48ch;margin-bottom:1.7rem}
+  .clinks{display:flex;gap:1.4rem;flex-wrap:wrap;font-family:var(--mono);font-size:.82rem;letter-spacing:.04em}
+  .clinks a{border-bottom:1px solid var(--line);padding-bottom:2px;transition:.16s}
+  .clinks a:hover{color:var(--honey);border-color:var(--honey)}
+  footer{border-top:1px solid var(--line);margin-top:56px;padding:22px 0 40px;
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;
+    font-family:var(--mono);font-size:.7rem;color:var(--faint);letter-spacing:.06em}
+  footer a.back{color:var(--pine)}
+  footer a.back:hover{color:var(--honey)}
+
+  /* ---------- reveal ---------- */
+  .rev{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.3,1)}
+  .rev.in{opacity:1;transform:none}
+
+  /* ---------- responsive ---------- */
+  @media(max-width:860px){
+    .hero-grid{grid-template-columns:1fr;gap:2rem}
+    .hero-photo{justify-self:start}
+    .now-inner{grid-template-columns:1fr 1fr;gap:1.2rem}
+    .now .tag{grid-column:1 / -1}
+    .prow{gap:2rem}
+    .gallery{columns:2}
+  }
+  @media(max-width:560px){
+    nav{display:none;position:absolute;top:60px;left:0;right:0;background:var(--paper2);
+      flex-direction:column;align-items:flex-start;gap:0;padding:.4rem 26px 1rem;border-bottom:1px solid var(--line)}
+    nav.open{display:flex}
+    nav a{padding:.55rem 0;width:100%;border-bottom:1px solid var(--line)}
+    .menu-btn{display:block}
+    .prow{grid-template-columns:1fr;gap:1.6rem}
+    .gallery{columns:1}
+    .now-inner{grid-template-columns:1fr}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important}
+    .rev{opacity:1;transform:none}
+    html{scroll-behavior:auto}
+  }
+  a:focus-visible,button:focus-visible{outline:2px solid var(--honey);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<!-- ================= TOP BAR ================= -->
+<header>
+  <div class="wrap bar">
+    <div class="brand">
+      <span class="nm">Raymond Yang</span>
+    </div>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu">MENU</button>
+    <nav id="nav">
+      <a href="#about">About</a>
+      <a class="work" href="index-terminal.html">The Work ↗</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="about">
+  <div class="wrap hero-grid">
+    <div class="rev">
+      <span class="eyebrow">Off the clock <span class="zh">· 下班之后</span></span>
+      <h1>Welcome to <br>my corner<br>off the clock.</h1>
+      <p class="lede">By day I wrangle messy data and build models until the numbers behave. The rest of the time is <b>quieter and cooler</b> — refreshing coffee, scenic trails, and a running list of places I haven't photographed yet. Game Lover, Enjoy Traveling, that's what I would love to do after work.</p>
+      <div class="meta">
+        <div class="row"><span class="k">Based in</span><span>Seattle, WA — mostly</span></div>
+        <div class="row"><span class="k">Currently</span><span>learning to develop my own firm</span></div>
+        <div class="row"><span class="k">Hobby &amp; interest</span><span>photography, the stock market, Passionate about volunteer work and public welfare causes</span></div>
+      </div>
+    </div>
+    <div class="hero-photo rev">
+      <div class="polaroid">
+        <!-- REPLACE with: <img class="ph" src="me.jpg" alt="a photo of you"> -->
+        <img class="ph" src="me.jpg" alt="Raymond Yang">
+        <p class="cap">that's me<span class="geo">SELF-PORTRAIT</span></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOW STRIP -->
+  <div class="now">
+    <div class="wrap now-inner rev">
+      <span class="tag">Right now</span>
+      <div class="item"><span class="l">Reading</span><span class="v">Clash of Civilizations</div>
+      <div class="item"><span class="l">Listening</span><span class="v">lo-fi jazz</div>
+      <div class="item"><span class="l">Chasing</span><span class="v">the <em>North Cascades</em> before first snow</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PURSUITS ================= -->
+<section class="blk" id="pursuits">
+  <div class="wrap">
+    <div class="sechead rev">
+      <h2>A few things I love<span class="zh">爱好</span></h2>
+      <span class="rule"></span>
+    </div>
+
+    <div class="pursuits">
+
+      <div class="prow imgs rev">
+        <div class="polaroid">
+          <img class="ph" src="film.jpg" alt="Traveling">
+        </div>
+        <div class="polaroid pine">
+          <img class="ph" src="markets.png" alt="Market research">
+        </div>
+      </div>
+
+      <div class="prow rev">
+        <div class="ptext">
+          <span class="n">01 / LIFE FRAMES</span>
+          <h3>Traveling</h3>
+          <p>Give me a departure board and I'm happy. New cities, even wrong turns at the cross, food I never saw before — travel is the one thing that resets me completely. I come back with a full camera roll and a longer list of places I still haven't been.</p>
+        </div>
+        <div class="ptext">
+          <span class="n">02 / CURIOSITY</span>
+          <h3>Market Research, for fun</h3>
+          <p>I dig into companies for fun — mostly healthcare, finance, and the AI/ML names reshaping both. I read the filings, trace the fundamentals, and try to figure out how a business actually makes money underneath the story. Willing to discuss the operational status of companies with anybody.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="rev">
+      <h2>Come say <em>hello</em>.</h2>
+      <p>Always up for coffee, trail recommendations, book swaps, or an argument about whether a stock is cheap. If it's the work you're after, that lives on the other page.</p>
+      <div class="clinks">
+        <a href="mailto:raymondrmyang@gmail.com">Email</a>
+        <a href="index-terminal.html">← Back to the work</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <footer>
+      <span>OFF-DUTY LOG · <span id="yr"></span> · SHOT ON FILM &amp; WHATEVER'S IN MY POCKET</span>
+      <a class="back" href="index-terminal.html">THE OPERATOR FILE ↗</a>
+    </footer>
+  </div>
+</section>
+
+<script>
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  // mobile menu
+  const mb=document.getElementById('menuBtn'),nav=document.getElementById('nav');
+  mb.addEventListener('click',()=>nav.classList.toggle('open'));
+  nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+  // scroll reveal
+  const io=new IntersectionObserver((e)=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}})},{threshold:.12});
+  document.querySelectorAll('.rev').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
